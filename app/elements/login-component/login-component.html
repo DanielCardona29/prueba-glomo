@@ -1,0 +1,55 @@
+<dom-module id="login-component">
+  <template>
+    <style>
+      :host {
+        display: block;
+        padding: 2em 0;
+        width: 40%;
+        margin: auto;
+        margin-bottom: 2rem;
+      }
+
+      .wrapper {
+        margin-top: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .input{
+        width: 360px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .helps{
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+
+    <div class="wrapper">
+      <h2>Iniciar sesion</h2>
+
+      <bbva-web-form-text class="input" label="Usuario" on-change="_inputUser" value="{{user::input}}"></bbva-web-form-text>
+      <bbva-web-form-password class="input" label="Contraseña" required value="{{pass::input}}"></bbva-web-form-password>
+
+      <bbva-button-default variant="primary" active on-click="_clickLogin">Iniciar</bbva-button-default>
+
+      <div class="helps">
+
+        <bbva-web-link on-click="_clickForget" target="_blank">¿Olvido su contraseña?</bbva-web-link>
+        <bbva-web-link on-click="_clickRegistry" target="_blank">Registrarse</bbva-web-link>
+
+      </div>
+    </div>
+
+    <listly-dm id="datamanager"></listly-dm>
+  </template>
+
+  <script src="./login-component.js"></script>
+</dom-module>

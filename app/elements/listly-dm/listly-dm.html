@@ -1,0 +1,60 @@
+<dom-module id="listly-dm">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+  </template>
+  <script>  
+  class ListlyDm extends Polymer.Element {
+
+  static get properties() {
+    return {
+      host: {
+            type: String,
+            value: 'https://list.ly/api/v4/'
+          },
+      userValue: {
+            type: String,
+          },
+      passValue: {
+            type: String,
+          }
+    };
+  }
+
+  static get is() {
+    return 'listly-dm';
+  }
+
+  constructor() {
+    super();
+  }
+
+  async apiConnect(url, method = 'GET', body) {
+    return await fetch(this.host + url, {
+      method,
+      body: JSON.stringify(body),
+    })
+      .then((res) => res.json())
+      .then((res) => res);
+  }
+
+  login() {
+    let data = {
+      email: this.userValue,
+      password: this.passValue,
+    };
+    this.apiConnect('auth/signin', 'POST', data);
+  }
+
+
+
+}
+
+customElements.define(ListlyDm.is, ListlyDm);
+
+</script>
+</dom-module>

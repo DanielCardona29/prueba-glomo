@@ -1,0 +1,53 @@
+{
+    "template": {
+      "tag": "cells-template-paper-drawer-panel",
+      "familyPath": "@cells-components/cells-template-paper-drawer-panel",
+      "render": "litElement",
+      "properties": {
+        "mode": "seamed",
+        "zones": [
+          "app__header",
+          "app__main",
+          "app__footer"
+        ]
+      }
+    },
+    "components": [
+      {
+        "zone": "app__header",
+        "type": "UI",
+        "familyPath": "../elements/header-component",
+        "tag": "header-component",
+        "properties": {
+          "cellsConnections": {
+            "in": {
+              "greetingds-channel": {
+                "bind": "another-greeting"
+              }
+            }
+          }
+        }
+      },
+      {
+        "familyPath": "@bbva-web-components/bbva-web-form-text",
+        "render": "litElement",
+        "tag": "bbva-web-form-text"
+      },
+      {
+        "familyPath": "@bbva-web-components/bbva-web-form-password",
+        "render": "litElement",
+        "tag": "bbva-web-form-password"
+      },
+      {
+        "familyPath": "@bbva-web-components/bbva-button-default",
+        "render": "litElement",
+        "tag": "bbva-button-default"
+      },
+      {
+        "zone": "app__main",
+        "type": "UI",
+        "familyPath": "../elements/login-component",
+        "tag": "login-component"
+      }
+    ]
+  }

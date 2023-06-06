@@ -1,0 +1,40 @@
+<dom-module id="header-component">
+
+    <template>
+      <style>
+        :host {
+          display: block;
+          background-color: #fff;
+  
+        }
+  
+        .header{
+          color: #fff;
+          background-color: #004481;
+          display: flex;
+          position: fixed;
+          top: 0;
+          width: 100%;
+          height: 70px;
+          font-size: 20px;
+          justify-content: center;
+          align-items: center;
+        }
+      </style>
+
+      <div class="header">Bienvenido</div>
+  
+  
+    </template>
+  
+    <script>
+      class AnotherGreeting extends Polymer.Element {
+        static get is() {
+          return 'header-component';
+        }
+      }
+      customElements.define(AnotherGreeting.is, AnotherGreeting);
+    </script>
+  
+  </dom-module>
+  

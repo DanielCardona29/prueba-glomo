@@ -1,0 +1,19 @@
+{
+  "name": "app-col-challenge-january",
+  "version": "0.1.0",
+  "keywords": [
+    "cells-app"
+  ],
+  "dependencies": {
+    "@bbva-web-components/bbva-button-default": "^5.15.13",
+    "@bbva-web-components/bbva-foundations-theme": "^2.4.9",
+    "@bbva-web-components/bbva-web-divider": "^1.0.7",
+    "@bbva-web-components/bbva-web-form-password": "^1.2.12",
+    "@bbva-web-components/bbva-web-form-text": "^1.1.9",
+    "@bbva-web-components/bbva-web-link": "^1.6.4",
+    "@cells-components/cells-template-paper-drawer-panel": "^2.0.17",
+    "@cells/cells-bridge": "^3.19.2",
+    "@webcomponents/shadycss": "^1.11.2",
+    "cells-app-template": "~6.0.0"
+  }
+}
